@@ -1,0 +1,50 @@
+﻿@model SportsStats.Models.StatsModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>StatsModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.StatType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StatType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StatValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StatValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StatYear)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StatYear)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StatDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StatDesc)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.StatID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,62 @@
+﻿@model IEnumerable<SportsStats.Models.StatsModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+<div class="container">
+    <div class="row row-title">
+        <div class="col-12 col-title">
+            <h2>Index</h2>
+        </div>
+    </div>
+    <div class="row row-2">
+        <div class="col-12 col-action">
+            <p>
+                @Html.ActionLink("Create New", "Create")
+            </p>
+        </div>
+    </div>
+    <div class="row row-3">
+        <div class="col-2">
+            @Html.DisplayNameFor(model => model.StatType)
+        </div>
+        <div class="col-2">
+            @Html.DisplayNameFor(model => model.StatValue)
+        </div>
+        <div class="col-2">
+            @Html.DisplayNameFor(model => model.StatYear)
+        </div>
+        <div class="col-6">
+            @Html.DisplayNameFor(model => model.StatDesc)
+        </div>
+    </div>
+
+
+    <div class="row row-4">
+
+        @foreach (var item in Model)
+    {
+
+        <div class="col-2">
+            @Html.DisplayFor(modelItem => item.StatType)
+        </div>
+        <div class="col-2">
+            @Html.DisplayFor(modelItem => item.StatValue)
+        </div>
+        <div class="col-2">
+            @Html.DisplayFor(modelItem => item.StatYear)
+        </div>
+        <div class="col-2">
+            @Html.DisplayFor(modelItem => item.StatDesc)
+        </div>
+        <div class="col-4">
+            @Html.ActionLink("Edit", "Edit", new { id = item.StatID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.StatID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.StatID })
+        </div>
+
+
+
+}
+    </div>
+</div>
